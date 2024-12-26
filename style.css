@@ -1,0 +1,569 @@
+/* importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+} */
+
+:root {
+    --white-color: #fff;
+    --dark-color: #252525d0;
+
+    --secondary-color: #3f2104e3;
+    --light-pink-color: #faf4f5;
+    --medium-gray-color: #ccc;
+
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+
+    --site-max-width: 1300px;
+}
+   
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+button {
+    cursor: pointer;
+    border: none;
+    background: none; 
+}
+img {
+    width: 100%;
+}
+.section-content {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: var(--site-max-width);
+
+}
+.section-title {
+    text-align: center;
+    padding: 60px 0 100px;
+    text-transform: uppercase;
+    font-size: var(--font-size-xl);
+}
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: var(--border-radius-s);
+    background: var(--secondary-color);
+}
+
+/* Navbar styling */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    background: var(--primary-color);
+}
+
+header .navbar {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .nav-logo .logo-text {
+    color: var(--white-color);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+}
+
+.navbar .nav-menu {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar .nav-menu .nav-link {
+    padding: 10px 18px;
+    color: var(--white-color);
+    font-size: var(--font-size-m);
+    border-radius: var(--border-radius-m);
+    transition: 0.3s ease;
+}
+.navbar .nav-menu .nav-link:hover {
+    color: var(--primary-color);
+    background: var(--secondary-color);
+}
+
+.navbar :where(#menu-close-button, #menu-open-button) {
+    display: none;
+}
+
+/* Hero section styling */
+.hero-section {
+    min-height: 100vh;
+    background: var(--primary-color);
+}
+
+.hero-section .section-content {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--white-color);
+    justify-content: space-between;
+}
+
+.hero-section .hero-details .title {
+    font-size: var(--font-size-xxl);
+    color: var(--secondary-color);
+    font-family: 'Times New Roman', Times, serif;
+}
+.hero-section .hero-details .subtitle {
+    margin-top: 8px;
+    max-width: 70%;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+}
+.hero-section .hero-details .description {
+    max-width: 70%;
+    margin: 24px 0 40px;
+    font-size: var(--font-size-m);
+}
+
+/* Styling buttons */
+.hero-section .hero-details .buttons {
+    display: flex;
+    gap: 15px;
+}
+.hero-section .hero-details .button {
+    padding: 6px 14px; /* Reduced padding */
+    font-size: var(--font-size-s); /* Smaller font size */
+    border: 2px solid transparent;
+    color: var(--primary-color);
+    border-radius: var(--border-radius-s); /* Slightly smaller radius */
+    background: var(--secondary-color);
+    font-weight: var(--font-weight-medium);
+    transition: 0.3s ease;
+}
+.hero-section .hero-details .button:hover {
+    color: var(--white-color);
+    background: var(--dark-color);
+}  
+.hero-section .hero-details .contact-us:hover {
+    color: var(--primary-color);
+    background: var(--secondary-color);
+}
+
+.hero-section{
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-image: url(123.jpg);
+    background-repeat: no-repeat;
+    background-position: auto center;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "popins", sans-serif;
+}
+:root{
+    --bg-color: url(12.jpg);
+    --text-color: white;
+    --main-color: #e4b381;
+    
+}
+html{
+    font-size: 100%;
+    overflow-x: hidden;
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 2rem;
+    font-size: 1.6rem;
+    color: white;
+    border: 2px solid transparent;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.btn:hover{
+    transform: scale(1.05);
+    background: var(--main-color);
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+} 
+ /* about */
+.about{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(12.jpg);
+    min-height: 100vh;  
+    background-attachment: fixed;
+    background: cover;
+}
+.heading{
+    font-size: 8rem;
+    text-align: center;
+}
+.about-content{
+    text-align: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(24, 24, 24, 0.3);
+    border-radius: 2rem;
+    padding: 5rem;
+}
+.about-content h2{
+    text-align: center;
+    line-height: 1.5;
+}
+.about-content h3{
+    font-size: 2rem;
+}
+.about-content p{
+    font-size: 1.5rem;
+    margin: 2rem 0 3rem;
+    max-width: 800px;
+}
+.a {
+    background-color: var(--secondary-color); /* اللون الأحمر الداكن */
+    color: #ffffff; /* لون النص */
+    border: none; /* إزالة الإطار */
+    border-radius: 25px; /* جعل الزوايا دائرية */
+    padding: 10px 20px; /* المساحة الداخلية للزر */
+    font-size: 16px; /* حجم النص */
+    font-weight: bold; /* جعل النص سميك */
+    cursor: pointer; /* المؤشر يظهر كيد عند المرور */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* الظل الخفيف */
+    transition: transform 0.1s ease, box-shadow 0.1s ease; /* تأثير التحويل والظل */
+}
+
+/* menu */
+
+.menu-container {
+   
+    background: rgba(255, 255, 255, 0.1);
+    background-image:url(12.jpg) ;
+    background-size: cover;
+    background-position: auto center
+
+}
+.menu-section {
+    margin-bottom: 30px;
+    background-image:url(12.jpg) ;
+    background: cover;
+    background-size: cover;
+    background-position: auto center;
+}
+.menu-section h2 {
+    font-size: 28px;
+    color: #BDB0A1;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    
+
+   
+}
+.menu-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+.menu-item {
+    flex: 1 1 calc(33.333% - 15px);
+    background: #351c04e3; ;
+    
+    font-size: 28px;
+    
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  
+}
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(130, 115, 115, 0.4);
+   
+}
+.menu-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain; /* الصورة ستظهر كاملة بدون قص */
+    background-color:   #41250cd0;
+ 
+    /* خلفية رمادية لتعبئة المساحة الفارغة */
+}
+.menu-item-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color:#BDB0A1;
+ 
+}
+.menu-item-price {
+    font-size: 16px;
+    color:#BDB0A1;
+    margin-bottom: 10px;
+   
+}
+
+
+/* feedaback styling */
+/* Glassmorphism Feedback Section */
+.feedback {
+    position: relative;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+    margin: 50px auto;
+    max-width: 800px;
+}
+
+.feedback h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.feedback p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.feedback-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.feedback-form .form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.feedback-form label {
+    font-weight: bold;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.feedback-form label i {
+    margin-right: 5px;
+    color: #ff9900;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+    border-color: #ff9900;
+    box-shadow: 0 0 8px rgba(255, 153, 0, 0.5);
+}
+
+.feedback-form button {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff9900, #ff3300);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 153, 0, 0.3);
+}
+
+.feedback-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 153, 0, 0.5);
+}
+/* Main Container */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color:var(--secondary-color);
+
+}
+.gallery-section{
+background-color: var(--secondary-color);
+
+
+}
+/* Cards Styling */
+.card {
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #faf6f6;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: #000000;
+}
+
+/* contact us section styling */
+.contact-section {
+    padding: 50px 0 100px;
+    background-color:var(--secondary-color);
+}
+
+.contact-section .section-content {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.contact-section .contact-info-list .contact-info {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+    align-items: center;
+}
+
+.contact-section .contact-info-list .contact-info i {
+    font-size: var(--font-size-m);
+}
+.contact-section .contact-form .form-input {
+    width: 100%;
+    height: 50px;
+    padding: 0 12px;
+    outline: none;
+    margin-bottom: 16px;
+    background: var(--white-color);
+    border-radius: var(--font-size-s);
+    border: 1px solid var(--medium-gray-color);
+}
+
+.contact-section .contact-form {
+    max-width: 50%;
+}
+
+.contact-section .contact-form .form-input:focus {
+    border-color: var(--secondary-color);
+}
+.contact-section .contact-form textarea.form-input {
+    height: 100px;
+    padding: 12px;
+    resize: vertical;
+}
+.contact-section .contact-form .submit-button {
+    padding: 10px 26px;
+    margin-top: 10px;
+    color: var(--white-color);
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-medium);
+    background: var(--primary-color);
+    border-radius: var(--border-radius-m);
+    border: 1px solid var(--white-color);
+    transition: 0.3s ease;
+}
+.contact-section .contact-form .submit-button :hover {
+    color: var(--secondary-color);
+    background: transparent; 
+
+}
